@@ -15,6 +15,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
+import Header from 'components/Header';
+
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);
   margin: 0 auto;
@@ -40,6 +42,7 @@ export default class App extends React.PureComponent { // eslint-disable-line re
             { name: 'description', content: 'Managing DNS and Domain Records' },
           ]}
         />
+        <Header />
         {React.Children.toArray(this.props.children)}
       </AppWrapper>
     );
